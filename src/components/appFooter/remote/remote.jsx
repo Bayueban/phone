@@ -2,8 +2,26 @@ import './remote.css'
 import React, { useState } from 'react';
 import Operation from './operation'
 import Speed from './speed';
+import { Toast } from 'antd-mobile'
+
+
+
 
 const Remote = () => {
+
+    const [text, setText] = useState('o')
+
+    const check = () => {
+        if (text === "o") {
+            setText("||")
+            Toast.show(`机器人已停止`)
+        }
+        if (text === "||") {
+            setText("o")
+            Toast.show(`机器人已启动`)
+        }
+    }
+
     return <div id="remote">
         <div className="remoteSpace">
             <Speed str={"最大转角速度"}></Speed>
@@ -13,8 +31,8 @@ const Remote = () => {
             </div>
         </div>
         <div className="remotemContext flexC">
-            <div className="stop flexC">
-                ||
+            <div className="stop flexC" onClick={check}>
+                {text}
             </div>
         </div>
         <div className="remoteSpace">

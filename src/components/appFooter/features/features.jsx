@@ -3,95 +3,30 @@ import { useNavigate } from "react-router-dom"
 
 let obj = [
     {
-        name: "取消任务",
-        href: 'icon-quxiaodingdan'
+        name: "任务",
+        href: 'icon-quxiaodingdan',
+        route: '/tast'
     },
     {
-        name: "新建地图",
-        href: 'icon-xinjian'
+        name: "地图",
+        href: 'icon-xinjian',
+        route: '/map'
     },
 ]
 
 
 const Features = () => {
+
     let navigate = useNavigate();
+    const goPage = (e,route) => {
+        navigate(route)
+    }
+
     return (<div id="featuresTab">
         {
             obj.map(it => {
                 return (
-                    <div key={it.href} className="featureBox" onClick={() => {
-                        navigate("/map");
-                    }}>
-                        <span className={"iconfont" + " " + it.href}></span>
-                        {/* <span className="text">{it.name}</span> */}
-                    </div>
-                )
-            })
-        }
-        {
-            obj.map(it => {
-                return (
-                    <div key={it.href} className="featureBox">
-                        <span className={"iconfont" + " " + it.href}></span>
-                        {/* <span className="text">{it.name}</span> */}
-                    </div>
-                )
-            })
-        }
-        {
-            obj.map(it => {
-                return (
-                    <div key={it.href} className="featureBox">
-                        <span className={"iconfont" + " " + it.href}></span>
-                        {/* <span className="text">{it.name}</span> */}
-                    </div>
-                )
-            })
-        }
-        {
-            obj.map(it => {
-                return (
-                    <div key={it.href} className="featureBox">
-                        <span className={"iconfont" + " " + it.href}></span>
-                        {/* <span className="text">{it.name}</span> */}
-                    </div>
-                )
-            })
-        }
-        {
-            obj.map(it => {
-                return (
-                    <div key={it.href} className="featureBox">
-                        <span className={"iconfont" + " " + it.href}></span>
-                        {/* <span className="text">{it.name}</span> */}
-                    </div>
-                )
-            })
-        }
-        {
-            obj.map(it => {
-                return (
-                    <div key={it.href} className="featureBox">
-                        <span className={"iconfont" + " " + it.href}></span>
-                        {/* <span className="text">{it.name}</span> */}
-                    </div>
-                )
-            })
-        }
-        {
-            obj.map(it => {
-                return (
-                    <div key={it.href} className="featureBox">
-                        <span className={"iconfont" + " " + it.href}></span>
-                        {/* <span className="text">{it.name}</span> */}
-                    </div>
-                )
-            })
-        }
-        {
-            obj.map(it => {
-                return (
-                    <div key={it.href} className="featureBox">
+                    <div key={it.href} className="featureBox" onClick={(e) => goPage(e,it.route)}>
                         <span className={"iconfont" + " " + it.href}></span>
                         {/* <span className="text">{it.name}</span> */}
                     </div>
