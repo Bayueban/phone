@@ -1,0 +1,11 @@
+#speed{
+  height: 30%;
+}
+.title{
+  text-align: center;
+  font-weight: bolder;
+  color: rgb(255, 140, 46);
+}
+.slider{
+  --fill-color:rgb(255, 140, 46)
+}

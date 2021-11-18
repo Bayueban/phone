@@ -1,0 +1,46 @@
+#header {
+    background-color: rgb(255, 140,0);
+    height: 6%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 10px;
+    font-weight: bolder;
+}
+.flexSA{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.states{
+    width: 15%;
+    height: 40%;
+    border-radius: 3rem;
+    background: rgb(59, 216, 119);
+    /* border:3px solid rgb(198, 218, 194); */
+    color: rgb(70, 70, 70);
+}
+.states img {
+    width: 1.5vh;
+}
+.coordinate{
+    background: rgb(70, 70, 70);
+    color: white;
+    height: 50%;
+    width: 50%;
+    border-radius: 3rem;
+}
+.coordinate img{
+    width: 1.2rem;
+}
+
+.power{
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    color: rgb(70, 70, 70);
+    align-items: center;
+}
+.power img{
+    width: 1.5rem;
+}

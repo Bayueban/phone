@@ -1,0 +1,39 @@
+#remote{
+    height: 75%;
+    width: 100%;
+    display: flex;
+}
+.flexC{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.remotemContext {
+    width: 20%;
+}
+
+.remoteSpace {
+    height: 100%;
+    width: 40%;
+    padding: 2%;
+}
+.stop{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: rgb(255, 140, 46);
+    color: white;
+    position: absolute;
+    bottom: 1rem;
+}
+.retemoBox{
+    position: relative;
+    height: 60%;
+    width: 100%;
+}
+
+.retemoBox>img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}

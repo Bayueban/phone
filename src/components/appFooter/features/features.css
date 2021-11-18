@@ -1,0 +1,30 @@
+#featuresTab{
+    display: flex;
+    height: 100%;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    /* padding: .1875rem ; */
+    /* padding: .5vh; */
+    box-shadow: 0 -.1rem .2rem rgb(206, 206, 206) inset
+}
+.featureBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    /* width: 2.25rem ;
+    height: 2.25rem ; 
+    margin: .1875rem */;
+
+    width: 4vh;
+    height: 4vh;
+    background: rgb(255, 140, 46);
+    border-radius: 20%;
+    margin: 1vh;
+    flex-shrink: 0;
+}
+
+.text{
+    font-size: .75rem /* 12/16 */;
+}
