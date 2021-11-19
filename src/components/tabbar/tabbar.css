@@ -1,17 +1,16 @@
 #tabbar{
-    background: rgb(90, 90, 90);
+    background: rgb(255, 150, 0);
     width: 100%;
     height: 5vh;
     position: absolute;
     bottom: 0;
+
+    z-index: 100;
+}
+#btnbox{
+    height: 100%;
+    height: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-}
-
-.btnImg{
-    width: 4vw;
-    line-height: 100%;
-    position: relative;
-    top: 1vw;
 }

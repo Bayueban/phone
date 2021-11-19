@@ -2,4 +2,34 @@
     height: 100%;
     width: 100%;
     background: rgb(255, 255, 255);
+    overflow: scroll;
+}
+
+.card{
+    border: 1px solid rgb(70,70,70);
+    margin: 1rem;
+    background: rgb(70,70,70);
+    color: white;
+
+}
+.cardImg{
+    height: 6rem;
+    width: 100%;
+    display: flex;
+}
+.cardImg img{
+    height: 5rem;
+    width: 5rem;
+    margin: .5rem;
+}
+.cardDetaild{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+
+}
+.cardDetaild div{
+    /* flex-wrap: wrap;
+    word-break: normal */
+    overflow: visible;
 }

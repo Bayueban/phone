@@ -10,7 +10,7 @@ import {
 } from 'antd-mobile'
 import dayjs from 'dayjs'
 import './tast.css'
-import Tabbar from '../../components/appTabbar/tabbar'
+import Tabbar from '../../components/tabbar/tabbar'
 
 const Tast = () => {
     const onFinish = () => {

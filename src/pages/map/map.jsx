@@ -1,44 +1,64 @@
 import React, { useState } from 'react'
-import {
-    Form,
-    Input,
-    Dialog,
-    TextArea,
-} from 'antd-mobile'
-import Tabbar from '../../components/appTabbar/tabbar'
+import { useNavigate } from "react-router-dom"
 
+import { Card, Button, TextArea } from 'antd-mobile'
+import Tabbar from '../../components/tabbar/tabbar'
 import './map.css'
 const Map = () => {
-    const onFinish = () => {
-        Dialog.alert({
-            content: "AAA"
-        })
+    const [value, setValue] = useState('')
+    let navigate = useNavigate();
+
+    const onClick = () => {
+        navigate('/',{state:{num:1}})
+    }
+
+    const CardList = () => {
+        let arr = [0, 0, 0, 0, 9, 9, 9]
+        return (
+            arr.map((it, index) => {
+                return (
+                    <Card key={index} className='card' onClick={onClick}
+                        title={
+                            <div>
+                                地图名称:
+                            </div>
+                        }
+                    >
+                        <div className="cardImg">
+                            <img src="./img/狐狸.png" alt="" />
+                            <div className="cardDetaild">
+                                <div>楼层：1楼</div>
+                                <span>地址：<TextArea
+                                    style={{ '--color': 'white' }}
+                                    value={'111111111sadawdaw111111111111111111111111111111111111111111111111111111111dad11111111'}
+                                    maxLength={30}></TextArea></span>
+
+                            </div>
+                        </div>
+                    </Card>
+                )
+            })
+        )
     }
 
 
     return (
         <div id="map">
-            <Form
-                layout='horizontal'
-            >
-                <Form.Item
-                    name='地图名称'
-                    label='地图名称'
-                    rules={[{ required: true, message: '地图名称不能为空' }]}
-                >
-                    <Input onChange={console.log} placeholder='请输入地图名称' />
-                </Form.Item>
-                <Form.Item
-                    name='地图楼层'
-                    label='地图楼层'
-                >
-                    <Input onChange={console.log} placeholder='请输入地图楼层' />
-                </Form.Item>
-                <Form.Item name='address' label='地址'>
-                    <TextArea placeholder='请输入地址' maxLength={100} rows={4} />
-                </Form.Item>
-            </Form>
-            <Tabbar></Tabbar>
+            <Tabbar
+                back={{
+                    name: '返回', foo: () => {
+                        navigate('/')
+                    }
+                }} next={{
+                    name: '新增', foo:
+                        () => {
+                            navigate('/addmap')
+                        }
+                }}></Tabbar>
+            <div id="cards">
+                <CardList />
+            </div>
+
         </div>
     )
 }

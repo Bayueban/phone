@@ -1,39 +1,36 @@
 import './features.css'
 import { useNavigate } from "react-router-dom"
 
-let obj = [
-    {
-        name: "任务",
-        href: 'icon-quxiaodingdan',
-        route: '/tast'
-    },
-    {
-        name: "地图",
-        href: 'icon-xinjian',
-        route: '/map'
-    },
-]
-
-
 const Features = () => {
-
     let navigate = useNavigate();
-    const goPage = (e,route) => {
-        navigate(route)
-    }
+
+    let obj = [
+        {
+            name: "定位",
+            href: 'icon-dingwei-dingwei',
+            foo:()=>{
+            }
+        },
+        {
+            name: "地图",
+            href: 'icon-ditu',
+            route: 'map',
+            foo:()=>{
+                navigate('/map')
+            }
+        },
+    ]
 
     return (<div id="featuresTab">
         {
             obj.map(it => {
                 return (
-                    <div key={it.href} className="featureBox" onClick={(e) => goPage(e,it.route)}>
+                    <div key={it.href} className="featureBox" onClick={() => it.foo()}>
                         <span className={"iconfont" + " " + it.href}></span>
-                        {/* <span className="text">{it.name}</span> */}
                     </div>
                 )
             })
         }
-
     </div>)
 }
 

@@ -4,12 +4,10 @@ import Operation from './operation'
 import Speed from './speed';
 import { Toast } from 'antd-mobile'
 
-
-
-
 const Remote = () => {
-
     const [text, setText] = useState('o')
+    const [turnValue, setTurnValue] = useState(0)
+    const [speedValue, setSpeedValue] = useState(0)
 
     const check = () => {
         if (text === "o") {
@@ -22,12 +20,29 @@ const Remote = () => {
         }
     }
 
+    const getTurnValue = (data) => {
+        // console.log('转向速度' + data)
+        setTurnValue(data)
+    }
+    const getSpeedValue = (data) => {
+        // console.log('直线速度' + data)
+        setSpeedValue(data)
+    }
+
+    const getLeftNipple = (data) => {
+        // console.log('左舵数值' + data)
+    }
+
+    const getRightNipple = (data) => {
+        // console.log('右舵数值' + data)
+    }
+
     return <div id="remote">
         <div className="remoteSpace">
-            <Speed str={"最大转角速度"}></Speed>
+            <Speed str={"最大转角速度"} getTurnValue={getTurnValue}></Speed>
             <div className="retemoBox">
                 {/* <img src="./img/八角星.png" alt=""  /> */}
-                <Operation></Operation>
+                <Operation getLeftNipple={getLeftNipple}></Operation>
             </div>
         </div>
         <div className="remotemContext flexC">
@@ -36,10 +51,10 @@ const Remote = () => {
             </div>
         </div>
         <div className="remoteSpace">
-            <Speed str={"最大直线速度"}></Speed>
+            <Speed str={"最大直线速度"} getSpeedValue={getSpeedValue}></Speed>
             <div className="retemoBox">
                 {/* <img src="./img/arrows2.png" alt=""  /> */}
-                <Operation></Operation>
+                <Operation getRightNipple={getRightNipple}></Operation>
             </div>
         </div>
     </div>

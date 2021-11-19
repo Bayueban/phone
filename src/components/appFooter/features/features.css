@@ -19,12 +19,8 @@
 
     width: 4vh;
     height: 4vh;
-    background: rgb(255, 140, 46);
+    background: rgb(255, 155, 0);
     border-radius: 20%;
     margin: 1vh;
     flex-shrink: 0;
-}
-
-.text{
-    font-size: .75rem /* 12/16 */;
 }
